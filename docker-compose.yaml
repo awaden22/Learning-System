@@ -1,0 +1,21 @@
+services:
+  mongo:
+    image: mongo
+    restart: always
+    command: ["mongod", "--replSet", "rs0", "--bind_ip_all"]
+
+  web-app-dev:
+    build:
+      context: .
+      target: dev
+
+    container_name: web-app-container
+
+    ports:
+      - "8000:4000"
+
+    volumes:
+      - ./src:/app/src:ro
+
+    env_file:
+      - ./.env.docker

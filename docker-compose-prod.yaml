@@ -1,0 +1,12 @@
+version:'5.4.0'
+
+services:
+web-app-prod:
+build:
+context: .
+target:prod
+container_name: web-app-container
+ports:
+- "8000:4000"
+env-file:
+- ./.env.prod
