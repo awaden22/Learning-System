@@ -79,6 +79,11 @@ async function bootstrap() {
     swaggerUi.serve,
     swaggerUi.setup(swaggerSpec)
   );
+  app.get("/",(req,res)=>{
+    return res.status(200).json({
+      message:"done"
+    })
+  })
 
   app.use("/auth", authController);
   app.use("/user", userController);
