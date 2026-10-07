@@ -31,7 +31,6 @@ export const Access_Key_Id = process.env.Access_Key_Id as string;
 export const Bucket_Name= process.env.Bucket_Name
 export const Application_Name = process.env.Application_Name
 export const Region= process.env.Region as string
-export const firebase_key= process.env.FIREBASER_API_KEY as string
 export const Secret_Access_Key= process.env.Secret_Access_Key as string
 
 
