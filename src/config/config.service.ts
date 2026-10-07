@@ -6,7 +6,7 @@ export const NODE_ENV = process.env.NODE_ENV;
 
 
 
-dotenv.config({ path: path.resolve("./.env.dev") });
+dotenv.config({ path: path.resolve("./.env.prod") });
 
 export const SERVER_PORT = Number(process.env.PORT) || 3000;
 export const Database_URL = process.env.Database_URL as string;
